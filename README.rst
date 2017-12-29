@@ -1,0 +1,1 @@
+firehsql/README.rst
