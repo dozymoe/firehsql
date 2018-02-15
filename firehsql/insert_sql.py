@@ -27,8 +27,19 @@ class InsertSQL(SQL):
         return OnConflictUpdate(schema=self.schema, alias=self.alias)
 
 
-    def set_on_conflict(self, trigger, statement):
-        self.validate_insert_field_name(trigger)
+    def set_on_conflict(self, statement, *fields):
+        # compatibility
+        if isinstance(statement, OnConflictUpdate):
+            # new behaviour
+            for field in fields:
+                self.validate_insert_field_name(field)
+
+            trigger = ', '.join(sorted(str(f) for f in fields))
+        else:
+            # old behaviour
+            self.validate_insert_field_name(statement)
+            trigger = str(statement)
+            statement = fields[0]
 
         if statement is None:
             self.on_conflict[trigger] = 'DO NOTHING'
