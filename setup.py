@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-RELEASE_VERSION = '1.0.1'
+RELEASE_VERSION = '1.0.2'
 
 setup(
     name='firehsql',
