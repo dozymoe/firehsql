@@ -12,7 +12,7 @@ URL = 'https://github.com/dozymoe/firehsql'
 EMAIL = 'dozymoe@gmail.com'
 AUTHOR = 'Fahri Reza'
 REQUIRES_PYTHON = '>=2.7.0'
-VERSION = '1.0.3'
+VERSION = '1.0.4'
 
 # What packages are required for this module to be executed?
 REQUIRED = [
