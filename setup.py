@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-RELEASE_VERSION = '1.0.2'
+RELEASE_VERSION = '1.0.3'
 
 setup(
     name='firehsql',
@@ -12,7 +12,8 @@ setup(
     author='Fahri Reza',
     author_email='dozymoe@gmail.com',
     description='Simple SQL generator.',
-    packages=find_packages(exclude=['tests']),
+    #packages=find_packages(exclude=['tests']),
+    packages=['firehsql'],
     include_package_data=True,
     platforms='any',
     license='GPLv3',

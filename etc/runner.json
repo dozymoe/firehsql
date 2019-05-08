@@ -3,6 +3,7 @@
         "lib.fireh_runner.modules.setup",
         "lib.fireh_runner.modules.python",
         "lib.fireh_runner.modules.pip",
+        "lib.fireh_runner.modules.virtualenv",
         "lib.fireh_runner.modules.waf",
 
         "etc.runner_modules.unittest"
